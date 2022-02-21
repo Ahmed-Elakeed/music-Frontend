@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Album form</title>
+</head>
+<body>
+<div class="container">
+  <form (ngSubmit)="saveAlbum()">
+    <h3>Album form</h3>
+    <div class="mb-3">
+      <label for="name" class="form-label">Album name</label>
+      <input type="text" name="album_name" [(ngModel)]="album.albumName"  class="form-control" id="name"
+             aria-describedby="emailHelp" required>
+    </div>
+    <div class="mb-3">
+      <label for="r_date" class="form-label">Released date</label>
+      <input type="text" name="released_date" [(ngModel)]="album.releasedDate"  class="form-control" id="r_date"
+             aria-describedby="emailHelp" required>
+    </div>
+    <div class="mb-3">
+      <label for="artistSelect" class="form-label">Artist</label>
+      <select required [(ngModel)]="album.artist.artistId" [ngModelOptions]="{standalone: true}"  id="artistSelect" class="form-select">
+        <option *ngFor="let artist of artists" [ngValue]="artist.artistId">{{artist.artistName}}</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="genreSelect" class="form-label">Genre</label>
+      <select required [(ngModel)]="album.genre.genreId" [ngModelOptions]="{standalone: true}"  id="genreSelect" class="form-select">
+        <option *ngFor="let genre of genres" [ngValue]="genre.genreId">{{genre.genreName}}</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>

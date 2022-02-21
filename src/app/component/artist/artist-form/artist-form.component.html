@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Artist form</title>
+  </head>
+<body>
+<app-navbar></app-navbar>
+<div class="container">
+  <form (ngSubmit)="saveArtist()">
+    <h3>Artist form</h3>
+    <div class="mb-3">
+      <label for="name" class="form-label">Artist Name</label>
+      <input type="text" name="artist_name" [(ngModel)]="artist.artistName" class="form-control" id="name" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</body>
+</html>
+
