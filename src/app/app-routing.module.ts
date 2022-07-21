@@ -7,6 +7,7 @@ import {AlbumComponent} from "./component/album/album.component";
 import {ArtistFormComponent} from "./component/artist/artist-form/artist-form.component";
 import {GenreFormComponent} from "./component/genre/genre-form/genre-form.component";
 import {AlbumFormComponent} from "./component/album/album-form/album-form.component";
+import {PageNotFoundComponent} from "./component/page-not-found/page-not-found.component";
 
 const routes: Routes = [
   {
@@ -48,6 +49,10 @@ const routes: Routes = [
   {
     path:'albumForm/:id',
     component:AlbumFormComponent
+  },
+  {
+    path:'**',
+    component:PageNotFoundComponent
   }
 ]
 

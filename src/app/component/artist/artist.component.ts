@@ -12,7 +12,7 @@ import {Album} from "../../model/Album";
 export class ArtistComponent implements OnInit {
   public artists: Artist[];
 
-  constructor(private artistService: ArtistService, private router: Router) {
+  constructor(private artistService: ArtistService) {
   }
 
   ngOnInit(): void {

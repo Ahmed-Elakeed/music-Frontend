@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ArtistFormComponent } from './component/artist/artist-form/artist-form.component';
 import { GenreFormComponent } from './component/genre/genre-form/genre-form.component';
 import { AlbumFormComponent } from './component/album/album-form/album-form.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AlbumFormComponent } from './component/album/album-form/album-form.comp
     NavbarComponent,
     ArtistFormComponent,
     GenreFormComponent,
-    AlbumFormComponent
+    AlbumFormComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

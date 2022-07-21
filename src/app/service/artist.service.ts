@@ -32,7 +32,7 @@ export class ArtistService {
   public deleteArtistById(id: number): Observable<Artist> {
     return this.http.delete<Artist>(this.BaseUrl + id);
   }
-  public albumsForArtistById(id:number):Observable<number>{
-    return this.http.get<number>(this.BaseUrl+id+'/albums');
+  public albumsForArtistById(id:number):Observable<Album[]>{
+    return this.http.get<Album[]>(this.BaseUrl+id+'/albums');
   }
 }
