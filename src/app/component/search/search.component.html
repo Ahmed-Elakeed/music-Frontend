@@ -1,0 +1,67 @@
+<html>
+<head>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg" id="top-nav">
+  <div class="container-fluid">
+    <a class="navbar-brand">Moody's</a>
+    <form>
+      <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search ratings, research, analysts, and more..." aria-label="Search" [(ngModel)]="searchWord" name="searchWord" aria-describedby="search-addon" />
+        <button type="submit" class="btn btn-primary" (click)="search()">Search</button>
+      </div>
+    </form>
+  </div>
+</nav>
+<div class="container">
+  <br>
+  <div class="btn-group" role="group" aria-label="Basic radio toggle button group" id="buttons-group">
+    <input type="radio" (click)="allRadioChecked()" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio1">All</label>
+
+    <input type="radio" (click)="albumRadioChecked()" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">Organizations</label>
+
+    <input type="radio" (click)="artistRadioChecked()" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio3">Deals & Programs</label>
+
+    <input type="radio" (click)="genreRadioChecked()" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio4">Reports</label>
+
+  </div>
+  <br>
+  <br>
+  <h6>{{resultNumber}} Results</h6>
+  <br>
+  <hr>
+  <br>
+  <br>
+  <div *ngIf="albumRadio && searchWord!=''">
+    <div *ngFor="let album of albums">
+      <h4>{{album.albumName}}</h4>
+      <span>{{album.releasedDate}}</span>
+      <p>{{album.artist.artistName}}  ||  {{album.genre.genreName}}</p>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div *ngIf="artistRadio && searchWord!=''">
+    <div *ngFor="let artist of artists">
+      <p>{{artist.artistId}}</p>
+      <h4>{{artist.artistName}}</h4>
+      <br>
+      <br>
+    </div>
+  </div>
+  <div *ngIf="genreRadio && searchWord!=''">
+    <div *ngFor="let genre of genres">
+      <p>{{genre.genreId}}</p>
+      <h4>{{genre.genreName}}</h4>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+

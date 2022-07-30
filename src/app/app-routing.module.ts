@@ -8,11 +8,16 @@ import {ArtistFormComponent} from "./component/artist/artist-form/artist-form.co
 import {GenreFormComponent} from "./component/genre/genre-form/genre-form.component";
 import {AlbumFormComponent} from "./component/album/album-form/album-form.component";
 import {PageNotFoundComponent} from "./component/page-not-found/page-not-found.component";
+import {SearchComponent} from "./component/search/search.component";
 
 const routes: Routes = [
   {
     path: 'artists',
     component: ArtistComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
   },
   {
     path: '',

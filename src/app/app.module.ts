@@ -13,6 +13,7 @@ import { ArtistFormComponent } from './component/artist/artist-form/artist-form.
 import { GenreFormComponent } from './component/genre/genre-form/genre-form.component';
 import { AlbumFormComponent } from './component/album/album-form/album-form.component';
 import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
+import { SearchComponent } from './component/search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PageNotFoundComponent } from './component/page-not-found/page-not-found
     ArtistFormComponent,
     GenreFormComponent,
     AlbumFormComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

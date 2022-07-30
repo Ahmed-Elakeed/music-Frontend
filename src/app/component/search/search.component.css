@@ -1,0 +1,18 @@
+a{
+  color: white;
+  font-size: xx-large;
+  font-family: "Arial Rounded MT Bold";
+}
+#top-nav{
+  background-color: navy;
+}
+form{
+  width: 450px;
+}
+#buttons-group{
+  width:70%;
+  margin: auto;
+}
+h6{
+  margin: auto;
+}
