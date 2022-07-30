@@ -97,4 +97,13 @@ export class SearchComponent implements OnInit {
       this.resultNumber=this.genres.length;
     }
   }
+
+  checkEmptyWord() {
+    if(this.searchWord==''){
+      this.resultNumber=0;
+      this.albums=[];
+      this.artists=[];
+      this.genres=[];
+    }
+  }
 }

@@ -16,6 +16,9 @@ export class AlbumComponent implements OnInit {
   public genre: Genre=new Genre();
   public genreDisplayStyle="none";
 
+  public face_name:string[] | undefined=[]
+  public facetNameDisplayStyle="none";
+
   constructor(private albumService: AlbumService) {
   }
   ngOnInit(): void {
@@ -48,5 +51,14 @@ export class AlbumComponent implements OnInit {
   }
   closeGenrePopup() {
     this.genreDisplayStyle = "none";
+  }
+
+  openFacetNamePopup(facet_name: string[] | undefined) {
+    this.face_name=facet_name;
+    this.facetNameDisplayStyle="block";
+  }
+
+  closeFacetNamePopup() {
+    this.facetNameDisplayStyle="none";
   }
 }

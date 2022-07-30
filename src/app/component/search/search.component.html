@@ -7,7 +7,7 @@
     <a class="navbar-brand">Moody's</a>
     <form>
       <div class="input-group">
-        <input type="search" class="form-control rounded" placeholder="Search ratings, research, analysts, and more..." aria-label="Search" [(ngModel)]="searchWord" name="searchWord" aria-describedby="search-addon" />
+        <input type="search" class="form-control rounded" placeholder="Search ratings, research, analysts, and more..." aria-label="Search" (input)="checkEmptyWord()" [(ngModel)]="searchWord" name="searchWord" aria-describedby="search-addon" />
         <button type="submit" class="btn btn-primary" (click)="search()">Search</button>
       </div>
     </form>
